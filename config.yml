@@ -1,0 +1,129 @@
+serverSocket:
+  enabled: true
+  # The ip address where the CoreMeetup is located
+  received_information_host: 127.0.0.1
+  # The port where the CoreMeetup is located
+  received_information_port: 25599
+  # This name must match the configuration of the Core Meetup
+  server_name: "Meetup-1"
+
+bungeecord:
+  enabled: false
+  server: lobby
+
+restart_command: restart
+
+settings:
+  max_players: 24
+  min_players: 12
+  teleporting_full_seconds: 30
+  teleporting_nofull_seconds: 60
+  starting_seconds: 10
+  restarting_seconds: 30
+
+border_settings:
+  glassborder: 1
+  glassborder_task: 5
+  border_height: 3
+  border_size: 200
+  border_shrinks:
+   - 150;300
+   - 100;180
+   - 75;120
+   - 50;120
+   - 25;120
+
+world_settings:
+  load_chunks: true
+  verific:
+    # Maximum number of trees is greater than 300, the map is regenerated
+    maxLog: 500
+    # Maximum amount of water to regenerate the map
+    maxWater: 15000
+
+goldenhead:
+  name: "&6Golden Head"
+  lore: 
+   - "&5Some say consuming the head of a"
+   - "&5fallen foe strengthens the blood"
+  effects:
+    # POTION_EFFECT_TYPE: SECONDS;LEVEL
+    REGENERATION: 10;2
+    ABSORPTION: 120;1
+    SPEED: 5;1
+
+
+items_settings:
+  scenarios_menu:
+    noclean_lore:
+     - "&fWhen you kill, you're given 20 seconds of protection."
+     - ""
+     - "&eClick to vote for this scenario."
+    timebomb_lore:
+     - "&fWhen you die, your loot is placed in a chest"
+     - "&fand explodes in 30 seconds."
+     - ""
+     - "&eClick to vote for this scenario."
+    rodless_lore:
+     - "&fFishing rods are not allowed."
+     - ""
+     - "&eClick to vote for this scenario."
+    killswitch_lore:
+     - "&fWhen you kill someone, their inventory"
+     - "&fwill be switched to yours."
+     - ""
+     - "&eClick to vote for this scenario."
+    fireless_lore:
+     - "&fFire will not hurt you."
+     - ""
+     - "&eClick to vote for this scenario."
+    absorptionless_lore:
+     - "&fGolden apples will not give you absorption."
+     - ""
+     - "&eClick to vote for this scenario."
+    nofall_lore:
+     - "&fThe fall damage won't hurt him.."
+     - ""
+     - "&eClick to vote for this scenario."
+  waitting:
+    vote_scenarios:
+      # ITEM-ID;AMOUNT;DATA-VALUE
+      item: 264;1;0
+      slot: 1
+      name: "&aScenarios"
+      # If you don't want me to have lore, delete this section.
+      lore:
+       - "&7Click to vote for a scenario for the game."
+    stats:
+      item: 399;1;0
+      slot: 2
+      name: "&aYour stats"
+    leave:
+      item: bed;1;0
+      slot: 9
+      name: "&cLeave"
+
+elo_settings:
+  per_death: 0
+  per_kill: 1
+  per_win: 10
+  default_rank: "&8Uncassified"
+  ranks:
+    '1':
+      elo: 100:1000
+      rank: "&7Bronze"
+    '2':
+      elo: 1000:1200
+      rank: "&fSilver"
+    '3':
+      elo: 1200:1400
+      rank: "&6Gold"
+    '4':
+      elo: 1400:1600
+      rank: "&aEmerald"
+    '5':
+      elo: 1600:1800
+      rank: "&dDiamond"
+    '6':
+      elo: 1800:99999999
+      rank: "&5Master"

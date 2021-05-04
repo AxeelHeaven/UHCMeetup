@@ -1,0 +1,16 @@
+main: com.axeelheaven.meetup.Main
+name: HMeetup
+version: 1.0.0
+author: AxeelHeaven
+softdepend: [PlaceholderAPI]
+commands:
+   elo:
+      description: Check your elo and your rank.
+   forcestart:
+      description: With this command you will force the arena to start.
+   kits:
+      description: Edit/Add the kits.
+   uptime:
+      description: Check the performance of the server.
+   ping:
+      description: Check your server latency.
